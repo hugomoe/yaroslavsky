@@ -82,7 +82,7 @@ meanimg=0.0;
 		 	img_aux[dimax/2+(dimax-x)/2-i+(2*dimax)*(dimax/2+(dimax-z)/2-j)]=img[(i+j*x)*3+p] ;
 		}
 	}
-// au milieu à gauche
+
 // au milieu à droite
      for (int i=x/2;i<x;i++){
 		for (int j=0;j<z;j++){
