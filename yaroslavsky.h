@@ -66,22 +66,23 @@ meanimg=0.0;
 		}
 	}
 
-// conditions aux bords symétriques pour éviter l'effet gibbs au maximum:
+
 	
-// En haut à gauche
+
      for (int i=0;i<x;i++){
 		for (int j=0;j<z;j++){
 		 	img_aux[dimax/2+(dimax-x)/2+i+(2*dimax)*(dimax/2+(dimax-z)/2+j)]=img[(i+j*x)*3+p] ;
 		}
 	}
+// conditions aux bords symétriques pour éviter l'effet gibbs au maximum:
+// En haut à gauche
 
-// au milieu à gauche
      for (int i=0;i<x/2;i++){
 		for (int j=0;j<z/2;j++){
 		 	img_aux[dimax/2+(dimax-x)/2-i+(2*dimax)*(dimax/2+(dimax-z)/2-j)]=img[(i+j*x)*3+p] ;
 		}
 	}
-
+// au milieu à gauche
 // au milieu à droite
      for (int i=x/2;i<x;i++){
 		for (int j=0;j<z;j++){
